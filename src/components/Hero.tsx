@@ -1,13 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import me from "../../public/me.png";
 import Image from "next/image";
 import styled from "styled-components";
 import TypeWriter from "./TypeWriter";
 import { Section } from "./styled/styles/Section.style";
 
 const HeroSection = styled(Section)`
-  /* min-height: 85vh; */
   .img {
     transition: 0.3s linear;
     position: relative;
@@ -45,14 +43,6 @@ const Intro = styled.h1`
 export default function Hero() {
   return (
     <HeroSection className="pt-2">
-      <Image
-        src="/25335.jpg"
-        width={900}
-        height={900}
-        className="back"
-        alt="background"
-        priority
-      />
       <Container fluid>
         <Row className="d-flex  flex-lg-row flex-column-reverse">
           <Col
@@ -68,7 +58,14 @@ export default function Hero() {
             </Intro>
           </Col>
           <Col lg={{ span: 5, offset: 0 }}>
-            <Image src={me} alt="as" className="img-fluid img" priority />
+            <Image
+              src="/me.png"
+              width={700}
+              height={700}
+              alt="asr"
+              className="img-fluid img"
+              priority
+            />
           </Col>
         </Row>
       </Container>

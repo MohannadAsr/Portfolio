@@ -134,7 +134,11 @@ export default function ContactMe() {
                       transition={{ duration: 0.8 }}
                       key={index}
                     >
-                      <Link href={logo.link} target="blank">
+                      <Link
+                        href={logo.link}
+                        target="blank"
+                        aria-label={`Visit My Account on ${logo.name}`}
+                      >
                         <FontAwesomeIcon
                           icon={logo.name}
                           size="2xl"
@@ -146,11 +150,11 @@ export default function ContactMe() {
                   );
                 })}
               </div>
-              <h1 className="text-center">M.ASR Portfolio</h1>
-              <h6 className="text-center">
+              <p className="text-center fs-1">M.ASR Portfolio</p>
+              <p className="text-center fs-6">
                 All new projects and designs will upload here in my portfolio,
                 stay tuned for more
-              </h6>
+              </p>
             </Col>
           </Row>
         </div>

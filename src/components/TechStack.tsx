@@ -105,6 +105,7 @@ export default function TechStack() {
                       delay: tech.id * 0.05,
                       duration: 2,
                     }}
+                    viewport={{ once: true }}
                   >
                     <TechContainer>
                       <p className="fs-5">{tech.name}</p>

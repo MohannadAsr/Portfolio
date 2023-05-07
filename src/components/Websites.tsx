@@ -31,7 +31,7 @@ export default function Websites() {
                       <Image
                         src={`/${project.bg_src}.jpg`}
                         alt={project.name}
-                        width={1200}
+                        width={800}
                         height={400}
                         className="img-fluid rounded"
                         priority

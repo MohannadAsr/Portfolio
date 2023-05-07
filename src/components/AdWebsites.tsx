@@ -105,8 +105,8 @@ export default function AdWebsites() {
                     }`}
                     src={`/${item.bg_src}.jpg`}
                     alt={item.name}
-                    width={500}
-                    height={500}
+                    width={400}
+                    height={400}
                     onClick={() => {
                       setSelectWeb(item);
                     }}
