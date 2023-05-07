@@ -1,0 +1,64 @@
+@include keyframes(writerTool) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(gradBorder) {
+  0% {
+    border-image-source: linear-gradient(to left, #4568fe, #18c4fe);
+  }
+  100% {
+    border-image-source: linear-gradient(to left, #18c4fe, #4568fe);
+  }
+}
+
+@include keyframes(textGrad) {
+  0% {
+    background: -webkit-linear-gradient(right, #4568fe, #18c4fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25% {
+    background: -webkit-linear-gradient(top, #18c4fe, #4568fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: -webkit-linear-gradient(bottom, #18c4fe, #4568fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-linear-gradient(right, #18c4fe, #4568fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@include keyframes(smoothNav) {
+  0% {
+    position: fixed;
+    top: -50px;
+  }
+  100% {
+    position: fixed;
+    top: 0;
+  }
+}
+
+@include keyframes(sideMenu) {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: 0;
+  }
+}

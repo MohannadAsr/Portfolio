@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merienda:wght@300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "./mixins.scss";
+@import "./animation.scss";
+@import "~bootstrap/scss/bootstrap";
+@import "./form";
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  background-color: #333;
+  width: 5px;
+}
+html::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #4568fe, #18c4fe);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif !important;
+
+  margin: 0;
+  padding: 0;
+}
+
+#__next {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.writer {
+  animation: writerTool 0.2s infinite alternate;
+}
+
+.container {
+  z-index: 2;
+  position: relative;
+}
