@@ -18,11 +18,9 @@ const TechContainer = styled.div`
   justify-content: center;
   width: 90%;
   margin: auto;
-  position: relative;
   padding: 1rem;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.037);
-
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
   overflow: hidden;
@@ -39,7 +37,7 @@ const TechContainer = styled.div`
     font-weight: bolder;
   }
   img {
-    filter: grayscale(1.5);
+    filter: grayscale(0.7);
     transition: 0.4s ease;
   }
   &:hover img {
@@ -91,36 +89,34 @@ export default function TechStack() {
           Application That I use in Creating And Developing Projects.
         </p>
         <Row className="my-4 gx-0 gy-3">
-          {tech &&
-            tech.map((tech) => {
-              return (
-                <Col xs={6} md={3} lg={3} xl={2} key={tech.id}>
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1, rotate: 360 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 260,
-                      damping: 20,
-                      delay: tech.id * 0.05,
-                      duration: 2,
-                    }}
-                    viewport={{ once: true }}
-                  >
-                    <TechContainer>
-                      <p className="fs-5">{tech.name}</p>
-                      <Image
-                        src={`/${tech.src}.png`}
-                        alt={`${tech.name}`}
-                        className="img-fluid"
-                        width={100}
-                        height={100}
-                      />
-                    </TechContainer>
-                  </motion.div>
-                </Col>
-              );
-            })}
+          {tech?.map((tech) => {
+            return (
+              <Col xs={6} md={3} lg={3} xl={2} key={tech.id}>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1, rotate: 360 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                    delay: tech.id * 0.05,
+                    duration: 2,
+                  }}
+                >
+                  <TechContainer>
+                    <p className="fs-5">{tech.name}</p>
+                    <Image
+                      src={`/${tech.src}.png`}
+                      alt={`${tech.name}`}
+                      className="img-fluid"
+                      width={100}
+                      height={100}
+                    />
+                  </TechContainer>
+                </motion.div>
+              </Col>
+            );
+          })}
         </Row>
       </Container>
     </TechSection>

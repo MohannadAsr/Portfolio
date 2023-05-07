@@ -1,5 +1,4 @@
 import AdWebsites from "@/components/AdWebsites";
-import NavBar from "@/components/NavBar";
 import React from "react";
 
 export default function AdvWebsites() {
