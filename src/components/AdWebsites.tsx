@@ -30,8 +30,6 @@ const ToolContainer = styled.div`
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.088);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.5px);
-  -webkit-backdrop-filter: blur(5.5px);
   overflow: hidden;
   font-size: 10px;
   font-weight: bold;
@@ -88,7 +86,9 @@ export default function AdWebsites() {
     <AdWebsiteSection>
       <Container className="py-4">
         <UniqueHead>Advanced View</UniqueHead>
-        <h5 className="my-3">Click on the Image to see the Projcet Details</h5>
+        <h5 className="my-3">
+          Click on the Image to see the Projcet Details :
+        </h5>
         <Row className=" g-2">
           <Col
             xs={12}
@@ -127,14 +127,17 @@ export default function AdWebsites() {
             />
 
             <div className="m-2">
-              <h1>{selectWeb.name}</h1>
-              <ToolContainer>
-                <h6>{selectWeb.type}</h6>
-              </ToolContainer>
-              <h5 className="my-3">{selectWeb.description}</h5>
-              <h5 className="my-3">
-                <MainTypo>Tools Used in This Website :</MainTypo>
-              </h5>
+              <div className="d-flex align-items-center gap-3 flex-wrap">
+                <h1>{selectWeb.name}</h1>
+                <ToolContainer>
+                  <h6>{selectWeb.type}</h6>
+                </ToolContainer>
+              </div>
+
+              <p className="my-3 fs-5">{selectWeb.description}</p>
+              <p className="my-3 fs-5">
+                <MainTypo>Tools Used in This Website:</MainTypo>
+              </p>
 
               <div className="d-flex flex-start flex-wrap gap-2">
                 {selectWeb.Tools?.map((tool) => {
