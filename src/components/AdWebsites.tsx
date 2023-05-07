@@ -128,6 +128,9 @@ export default function AdWebsites() {
 
             <div className="m-2">
               <h1>{selectWeb.name}</h1>
+              <ToolContainer>
+                <h6>{selectWeb.type}</h6>
+              </ToolContainer>
               <h5 className="my-3">{selectWeb.description}</h5>
               <h5 className="my-3">
                 <MainTypo>Tools Used in This Website :</MainTypo>
