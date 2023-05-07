@@ -21,8 +21,6 @@ const TechContainer = styled.div`
   padding: 1rem;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.037);
-  backdrop-filter: blur(5.5px);
-  -webkit-backdrop-filter: blur(5.5px);
   overflow: hidden;
 
   &:hover {
