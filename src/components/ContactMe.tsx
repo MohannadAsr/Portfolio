@@ -38,6 +38,7 @@ export default function ContactMe() {
           setAlert({ state: true, result: result.status });
           if (result.status === 200) {
             setDisableBtn(true);
+            e.target.reset();
           }
         },
         (error) => {
