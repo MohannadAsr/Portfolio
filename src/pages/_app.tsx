@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import { Analytics } from "@vercel/analytics/react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/main.scss";
 import { ThemeProvider } from "styled-components";
@@ -30,6 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <NavBar />
       <Component {...pageProps} />
       <Footer />
+      <Analytics />
     </ThemeProvider>
   );
 }
