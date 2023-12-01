@@ -8,7 +8,6 @@ import Head from "next/head";
 import { themeing } from "@/types/types";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
-import { Html } from "next/document";
 
 export default function App({ Component, pageProps }: AppProps) {
   const darkTheme: themeing = {
