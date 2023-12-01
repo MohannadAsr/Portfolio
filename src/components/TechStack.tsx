@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { Section } from "./styled/styles/Section.style";
-import { UniqueHead } from "./styled/styles/UniqueHead";
-import { Col, Container, Row } from "react-bootstrap";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { techStackInfo } from "@/data/techStackInfo";
-import { techTypes } from "@/types/types";
+import React from 'react';
+import styled from 'styled-components';
+import { Section } from './styled/styles/Section.style';
+import { UniqueHead } from './styled/styles/UniqueHead';
+import { Col, Container, Row } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { techStackInfo } from '@/data/techStackInfo';
+import { techTypes } from '@/types/types';
 
 const TechSection = styled(Section)``;
 
@@ -35,15 +35,15 @@ const TechContainer = styled.div`
     font-weight: bolder;
   }
   img {
-    filter: grayscale(0.7);
+    filter: grayscale(0.4);
     transition: 0.4s ease;
   }
   &:hover img {
-    filter: grayscale(0);
+    filter: grayscale(0) saturate(1.5);
     transition: 0.4s ease;
   }
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -50%;
     left: 50%;
@@ -94,10 +94,10 @@ export default function TechStack() {
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1, rotate: 360 }}
                   transition={{
-                    type: "spring",
+                    type: 'spring',
                     stiffness: 260,
                     damping: 20,
-                    delay: tech.id * 0.05,
+                    delay: tech.id * 0.03,
                     duration: 2,
                   }}
                 >

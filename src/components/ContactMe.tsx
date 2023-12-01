@@ -1,21 +1,21 @@
-import React, { FormEvent, FormEventHandler } from "react";
-import styled from "styled-components";
-import { Section } from "./styled/styles/Section.style";
-import { UniqueHead } from "./styled/styles/UniqueHead";
-import { Col, Container, Row } from "react-bootstrap";
-import { Button } from "./styled/styles/Button.style";
-import emailjs from "@emailjs/browser";
-import Alert from "./Alert";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { FormEvent, FormEventHandler } from 'react';
+import styled from 'styled-components';
+import { Section } from './styled/styles/Section.style';
+import { UniqueHead } from './styled/styles/UniqueHead';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Button } from './styled/styles/Button.style';
+import emailjs from '@emailjs/browser';
+import Alert from './Alert';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebookSquare,
   faGithubSquare,
   faInstagramSquare,
   faLinkedin,
   faWhatsappSquare,
-} from "@fortawesome/free-brands-svg-icons";
-import Link from "next/link";
-import { motion } from "framer-motion";
+} from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const ContactSection = styled(Section)``;
 
@@ -28,10 +28,10 @@ export default function ContactMe() {
 
     emailjs
       .sendForm(
-        "service_hbr3vjl",
-        "template_vaytgkm",
+        'service_hbr3vjl',
+        'template_vaytgkm',
         e.currentTarget,
-        "IfGxXlyWC1PbHM1O9"
+        'IfGxXlyWC1PbHM1O9'
       )
       .then(
         (result) => {
@@ -108,23 +108,23 @@ export default function ContactMe() {
                 {[
                   {
                     name: faLinkedin,
-                    link: "https://www.linkedin.com/in/mohannad-alassar-137597275/",
+                    link: 'https://www.linkedin.com/in/mohannad-alassar-137597275/',
                   },
                   {
                     name: faFacebookSquare,
-                    link: "https://www.facebook.com/mohannad.ala2sar/",
+                    link: 'https://www.facebook.com/mohannad.ala2sar/',
                   },
                   {
                     name: faWhatsappSquare,
-                    link: "https://api.whatsapp.com/send/?phone=963964539647",
+                    link: 'https://api.whatsapp.com/send/?phone=963964539647',
                   },
                   {
                     name: faGithubSquare,
-                    link: "https://github.com/MohannadAsr",
+                    link: 'https://github.com/MohannadAsr',
                   },
                   {
                     name: faInstagramSquare,
-                    link: "https://www.instagram.com/alassarmohannad/",
+                    link: 'https://www.instagram.com/alassarmohannad/',
                   },
                 ].map((logo, index) => {
                   return (
@@ -143,7 +143,7 @@ export default function ContactMe() {
                           icon={logo.name}
                           size="2xl"
                           role="button"
-                          style={{ color: "#fff" }}
+                          style={{ color: '#fff' }}
                         />
                       </Link>
                     </motion.div>
@@ -154,6 +154,10 @@ export default function ContactMe() {
               <p className="text-center fs-6">
                 All new projects and designs will upload here in my portfolio,
                 stay tuned for more
+              </p>
+              <p className=" text-center">
+                <span className=" text-warning"> Last Update : </span>
+                {new Date('2023-12-1').toDateString()}
               </p>
             </Col>
           </Row>

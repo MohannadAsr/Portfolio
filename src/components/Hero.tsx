@@ -51,7 +51,7 @@ export default function Hero() {
           >
             <Intro className="my-4 fw-bolder">
               <TypeWriter
-                text={"Hi ! , I'm Mohannad Alassar , Front-End Developer "}
+                text={"Hi ! , I'm Mohannad Alassar , a Front-End Developer "}
               />
             </Intro>
           </Col>
