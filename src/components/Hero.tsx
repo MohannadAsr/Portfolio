@@ -1,9 +1,9 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import Image from "next/image";
-import styled from "styled-components";
-import TypeWriter from "./TypeWriter";
-import { Section } from "./styled/styles/Section.style";
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import Image from 'next/image';
+import styled from 'styled-components';
+import TypeWriter from './TypeWriter';
+import { Section } from './styled/styles/Section.style';
 
 const HeroSection = styled(Section)`
   .img {
@@ -51,9 +51,7 @@ export default function Hero() {
           >
             <Intro className="my-4 fw-bolder">
               <TypeWriter
-                text={
-                  "Hi ! , I'm Mohannad Alassar A Front-End Developer with React JS"
-                }
+                text={"Hi ! , I'm Mohannad Alassar , Front-End Developer "}
               />
             </Intro>
           </Col>

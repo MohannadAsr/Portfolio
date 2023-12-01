@@ -1,10 +1,8 @@
-import React from "react";
-import { myProjects } from "@/data/myProjectsData";
-import { GetStaticProps, GetStaticPaths } from "next";
-import { projectTypes } from "@/types/types";
-import { ParsedUrlQuery } from "querystring";
-import NavBar from "@/components/NavBar";
-import WebsiteDetails from "@/components/WebsiteDetails";
+import WebsiteDetails from '@/components/WebsiteDetails';
+import { myProjects } from '@/data/myProjectsData';
+import { projectTypes } from '@/types/types';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { ParsedUrlQuery } from 'querystring';
 
 export default function Websites(props: { website: projectTypes }) {
   return (
