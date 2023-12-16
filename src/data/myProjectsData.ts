@@ -16,22 +16,7 @@ export const myProjects: projectTypes[] = [
     live_url: 'https://mohannadasr.github.io/Pizza-Delicous/',
     git_url: 'https://github.com/MohannadAsr/Pizza-Delicous',
   },
-  {
-    id: 2,
-    name: 'Weather App',
-    bg_src: 'WeatherApp',
-    type: 'Web App',
-    description:
-      'A Weather App Full Designed And Developed by me using real API with the ability to save favorites Cities and switching between Kelvin and celicus as the default temprature unit . ',
-    Tools: [
-      { name: 'React', tool_img: 'React' },
-      { name: 'CSS 3', tool_img: 'Css' },
-      { name: 'Bootstrap', tool_img: 'Bootstrap' },
-      { name: 'Axios', tool_img: 'Axios' },
-    ],
-    live_url: 'https://mohannadasr.github.io/WeatherApp/',
-    git_url: 'https://github.com/MohannadAsr/WeatherApp',
-  },
+
   {
     id: 3,
     name: 'FIFA Qatar 2022',
@@ -117,5 +102,21 @@ export const myProjects: projectTypes[] = [
     ],
     live_url: 'https://clinic-dashboard-phi.vercel.app/',
     git_url: 'https://github.com/MohannadAsr/Clinic-Dashboard',
+  },
+  {
+    id: 2,
+    name: 'Neftify',
+    bg_src: 'Neftify',
+    type: 'Web App',
+    description:
+      'Explore Neftify, a sleek NFT store with a user-friendly web app. Dive into a world of unique digital art using React, Sass, Tailwind CSS, and TypeScript. Unleash your creativity now',
+    Tools: [
+      { name: 'React', tool_img: 'React' },
+      { name: 'Sass', tool_img: 'Sass' },
+      { name: 'Tailwindcss', tool_img: 'Tailwindcss' },
+      { name: 'TypeScript', tool_img: 'TS' },
+    ],
+    live_url: 'https://neftify-six.vercel.app/',
+    git_url: 'https://github.com/MohannadAsr/Neftify',
   },
 ];
