@@ -157,7 +157,7 @@ export default function ContactMe() {
               </p>
               <p className=" text-center">
                 <span className=" text-warning"> Last Update : </span>
-                {new Date('2023-12-1').toDateString()}
+                {new Date('2023-12-16').toDateString()}
               </p>
             </Col>
           </Row>
