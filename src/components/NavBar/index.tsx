@@ -22,7 +22,7 @@ function NavBar() {
     <nav
       className={` shadow-lg z-[1000] w-full   bg-transparent py-2 ${fixedNav} main-background  `}
     >
-      <div className=" container flex items-center justify-between">
+      <div className=" container flex items-center justify-between px-2">
         <Link href={'/'}>
           <Logo />
         </Link>

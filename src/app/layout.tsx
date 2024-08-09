@@ -24,10 +24,10 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/main/me.png" />
       </head>
       <body>
-        <main className=" relative main-background px-2 lg:px-3">
+        <main className=" relative main-background ">
           <NavBar />
           <SocialLinks />
-          <section className=" container py-10 min-h-[100dvh]">
+          <section className=" container py-10 min-h-[100dvh] px-2 lg:px-3">
             {children}
           </section>
           <Footer />
