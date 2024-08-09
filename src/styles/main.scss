@@ -1,14 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merienda:wght@300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import "./mixins.scss";
-@import "./animation.scss";
-@import "~bootstrap/scss/bootstrap";
-@import "./form";
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merienda:wght@300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import './mixins.scss';
+@import './animation.scss';
+@import './form';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
+  transition: 0.3s background-color;
 }
 
 html {
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -22,39 +28,216 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  font-family: "Roboto", sans-serif !important;
-
+  font-family: 'Roboto', sans-serif !important;
+  color: white;
   margin: 0;
   padding: 0;
 }
 
-#__next {
-  overflow: hidden;
+.swiper-pagination-bullet {
+  color: white !important;
+  background-color: white !important;
 }
 
-a {
-  text-decoration: none;
+.nice {
+  background-image: linear-gradient(120deg, '#000', '#0e1533');
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
+.text-1 {
+  @apply text-5xl md:text-5xl lg:text-6xl  xl:text-6xl;
+}
+.text-2 {
+  @apply text-4xl md:text-4xl lg:text-5xl xl:text-5xl;
+}
+.text-3 {
+  @apply text-3xl md:text-3xl lg:text-4xl xl:text-4xl;
+}
+.text-4 {
+  @apply text-2xl md:text-2xl lg:text-3xl xl:text-3xl;
+}
+.text-5 {
+  @apply text-xl md:text-xl lg:text-2xl xl:text-2xl;
+}
+.text-6 {
+  @apply text-lg md:text-lg lg:text-xl xl:text-xl;
+}
+.text-7 {
+  @apply text-lg md:text-lg lg:text-lg xl:text-lg;
 }
 
-a:hover {
-  cursor: pointer;
+.side-light {
+  z-index: 1;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #18c4fe 20.62%,
+    transparent 100%
+  );
+  filter: blur(90px) saturate(0.8) grayscale(0.4);
+  transition: 0.7s ease-in-out;
+  &:hover {
+    filter: blur(140px) saturate(1.5) grayscale(0);
+    transition: 0.7s ease-in-out;
+  }
 }
 
-.writer {
-  animation: writerTool 0.2s infinite alternate;
+.main-background {
+  @apply bg-gradient-to-r from-[#000] to-[#0e1533];
 }
 
-.container {
-  z-index: 2;
+.logo {
+  animation: textGrad 2s infinite alternate linear;
+}
+.nav-link {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
+  text-transform: capitalize;
+  transition: 0.2s linear;
   position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transition: 0.2s linear;
+    background: -webkit-linear-gradient(right, #4568fe, #18c4fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.main-heading {
+  background: -webkit-linear-gradient(left, #4568fe, #18c4fe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tech-container {
+  position: relative;
+
+  padding: 1rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.037);
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0px 0px 18px 10px rgb(22 199 255 / 16%) inset;
+  }
+
+  // &:hover p {
+  //   background: -webkit-linear-gradient(#4568fe, #18c4fe);
+  //   -webkit-background-clip: text;
+  //   background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  //   font-weight: bolder;
+  // }
+  img {
+    filter: grayscale(0.4);
+    transition: 0.4s ease;
+  }
+  &:hover img {
+    filter: grayscale(0) saturate(1.5);
+    transition: 0.4s ease;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #18c4fe 20.62%,
+      transparent 100%
+    );
+    width: 80%;
+    height: 50%;
+    transition: 0.4s linear;
+  }
+  &:hover::after {
+    bottom: -35%;
+    transition: 0.4s linear;
+  }
+}
+
+.bottom-light {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #18c4fe 20.62%,
+      transparent 100%
+    );
+    width: 80%;
+    height: 50%;
+    transition: 0.4s linear;
+  }
+  &:hover::after {
+    bottom: -38%;
+    transition: 0.4s linear;
+  }
+}
+
+.main-button {
+  padding: 8px 15px;
+  outline: none;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 7px;
+  color: #fff;
+
+  &.active::after {
+    bottom: -35%;
+    transition: 0.4s linear;
+  }
+  &:disabled {
+    color: gray;
+  }
+
+  &:disabled::after {
+    display: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #18c4fe 20.62%,
+      transparent 100%
+    );
+    width: 80%;
+    height: 50%;
+    transition: 0.1s linear;
+  }
+  &:hover::after {
+    bottom: -35%;
+    transition: 0.1s linear;
+  }
+
+  &.active span {
+    background: -webkit-linear-gradient(#4568fe, #18c4fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+  }
+}
+
+.nav_animation {
+  animation: smoothNav 0.5s 1 linear;
 }
