@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/x-icon" href="/me.png" />
+        <link rel="icon" type="image/x-icon" href="/main/me.png" />
       </head>
       <body>
         <main className=" relative main-background px-2 lg:px-3">
