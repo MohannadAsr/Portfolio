@@ -29,6 +29,7 @@ function ProjectDetails({ params }: { params: { id: string } }) {
           </div>
           {targetProject?.live ? (
             <a
+              target="_blank"
               className="   main-button font-bold w-fit px-6 flex items-center gap-2"
               href={targetProject.live}
             >
