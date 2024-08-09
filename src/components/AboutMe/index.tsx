@@ -23,6 +23,7 @@ function AboutMe() {
         {personalInfo.map((item, index) => {
           return (
             <motion.div
+              key={index}
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               transition={{
@@ -31,7 +32,7 @@ function AboutMe() {
               }}
               className=" flex items-start  gap-2  bg-white/5  p-3 rounded-2xl tech-container shadow-sm"
             >
-              <p className=" font-semibold text-7   text-[#18c4fe]  ">
+              <p className=" font-semibold text-7   text-[#18c4fe] main-heading ">
                 {item.title}:
               </p>
               <p className="  text-[16px]  ">{item.value}</p>

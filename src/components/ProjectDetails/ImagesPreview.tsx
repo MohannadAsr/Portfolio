@@ -18,7 +18,7 @@ function ImagesPreview({ targetProject }: { targetProject: any }) {
       {Array.from({ length: targetProject?.totalImages as number }).map(
         (item, index) => {
           return (
-            <SwiperSlide className="bottom-light">
+            <SwiperSlide className="bottom-light" key={index}>
               <Image
                 alt={targetProject?.title as string}
                 width={1600}

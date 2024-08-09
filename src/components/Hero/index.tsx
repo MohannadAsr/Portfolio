@@ -10,7 +10,13 @@ function Hero() {
         <Intro />
       </div>
       <div className=" md:order-2 order-1">
-        <Image width={1000} height={1000} src={'/main/me.png'} alt="my-photo" />
+        <Image
+          width={1000}
+          height={1000}
+          src={'/main/me.png'}
+          alt="my-photo"
+          priority
+        />
       </div>
     </section>
   );

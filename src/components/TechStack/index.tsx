@@ -33,12 +33,13 @@ function TechStack() {
       <div className=" flex flex-col gap-7" id="tech">
         <div>
           <p className=" font-medium  text-start lg:text-center  p-2  rounded-xl text-[19px] mb-2">
-            Front-End Librares & FrameWorks
+            Front-End Languages & FrameWorks
           </p>
           <div className=" grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1 lg:gap-3">
             {FrameWorks.map((item, index) => {
               return (
                 <motion.div
+                  key={index}
                   className=" tech-container flex flex-col gap-1 items-center justify-center  group"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1, rotate: 360 }}
@@ -75,6 +76,7 @@ function TechStack() {
             {Librares.map((item, index) => {
               return (
                 <motion.div
+                  key={index}
                   className=" tech-container flex flex-col gap-1 items-center justify-center  group"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1, rotate: 360 }}
@@ -111,6 +113,7 @@ function TechStack() {
             {Fimilar.map((item, index) => {
               return (
                 <motion.div
+                  key={index}
                   className=" tech-container flex flex-col gap-1 items-center justify-center  group"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1, rotate: 360 }}
