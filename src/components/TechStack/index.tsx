@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const FrameWorks = [
   'HTML5',
-  'Css3',
+  'CSS3',
   'JavaScript',
   'TypeScript',
   'React',
