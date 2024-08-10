@@ -42,6 +42,7 @@ function SocialLinks() {
       {links.map((item, index) => {
         return (
           <a
+            aria-label={'Social-Link'}
             target="_blank"
             href={item.link}
             className="main-button group"
