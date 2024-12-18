@@ -1,5 +1,72 @@
 export const MyProjectsData = [
   {
+    title: '30Sec',
+    type: 'E-commerce',
+    description:
+      '30Sec is an upcoming e-commerce platform in Saudi Arabia, combining the functionality of buying and selling products with a social media-like experience through 30-second reels and user chat features, creating a unique and interactive marketplace.',
+    live: 'https://30-s.com/',
+    github: null,
+    stack: ['Next', 'Redux', 'TypeScript', 'Tailwindcss'],
+    totalImages: 5,
+  },
+  {
+    title: 'DDM Management',
+    type: 'Dashboard',
+    description:
+      'DDM Management Dashboard is a full-stack solution for managing employees, tasks, customer files, and generating professional documents with pre-built templates, tailored for DDM Company in Germany.',
+    live: null,
+    github: null,
+    stack: [
+      'React',
+      'Nest Js',
+      'Redux',
+      'TypeScript',
+      'Tailwindcss',
+      'Sass',
+      'Mui',
+      'Formik',
+      'Tanstack Query',
+    ],
+    totalImages: 5,
+  },
+  {
+    title: 'DamasRose Restaurant',
+    description:
+      'DamasRose Restaurant is an e-commerce platform that allows users to order various products currently available at the restaurant. It offers options to customize orders by selecting specific ingredients, along with the choice of delivery or in-store pickup. The platform also ensures secure electronic payment processing.',
+    type: 'E-commerce',
+    live: 'https://www.damasrose.de/',
+    github: null,
+    stack: [
+      'Next',
+      'Redux',
+      'TypeScript',
+      'Tailwindcss',
+      'Sass',
+      'Mui',
+      'Formik',
+    ],
+    totalImages: 5,
+  },
+  {
+    title: 'DamasRose Dashboard',
+    type: 'Dashboard',
+    description:
+      'I designed and developed the DamasRose dashboard from scratch, providing comprehensive control over the online store. The dashboard allows for full management of products and their categories, control over discounts and coupons, and numerous other features such as viewing order details, managing dashboard users, and overseeing staff with role assignments.',
+    live: null,
+    github: null,
+    stack: [
+      'React',
+      'Redux',
+      'TypeScript',
+      'Tailwindcss',
+      'Sass',
+      'Mui',
+      'Formik',
+      'Tanstack Query',
+    ],
+    totalImages: 6,
+  },
+  {
     title: 'Dubai Perfumes',
     type: 'E-commerce',
     description:
@@ -47,43 +114,7 @@ export const MyProjectsData = [
     stack: ['React', 'Redux', 'TypeScript', 'Tailwindcss', 'Sass'],
     totalImages: 5,
   },
-  {
-    title: 'Essto Restaurant',
-    description:
-      'Essto Restaurant is an e-commerce platform that allows users to order various products currently available at the restaurant. It offers options to customize orders by selecting specific ingredients, along with the choice of delivery or in-store pickup. The platform also ensures secure electronic payment processing.',
-    type: 'E-commerce',
-    live: 'https://platform.essto.de/categories',
-    github: null,
-    stack: [
-      'React',
-      'Redux',
-      'TypeScript',
-      'Tailwindcss',
-      'Sass',
-      'Mui',
-      'Formik',
-    ],
-    totalImages: 5,
-  },
-  {
-    title: 'Essto Dashboard',
-    type: 'Dashboard',
-    description:
-      'I designed and developed the Essto dashboard from scratch, providing comprehensive control over the online store. The dashboard allows for full management of products and their categories, control over discounts and coupons, and numerous other features such as viewing order details, managing dashboard users, and overseeing staff with role assignments.',
-    live: null,
-    github: null,
-    stack: [
-      'React',
-      'Redux',
-      'TypeScript',
-      'Tailwindcss',
-      'Sass',
-      'Mui',
-      'Formik',
-      'Tanstack Query',
-    ],
-    totalImages: 6,
-  },
+
   {
     title: 'My Chicken Dashboard',
     type: 'Dashboard',
