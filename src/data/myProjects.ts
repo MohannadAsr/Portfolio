@@ -5,7 +5,7 @@ export const MyProjectsData = [
     type: "E-commerce",
     description:
       "30Sec is an upcoming e-commerce platform in Saudi Arabia, combining the functionality of buying and selling products with a social media-like experience through 30-second reels and user chat features, creating a unique and interactive marketplace.",
-    live: "https://30-s.com/",
+    live: null,
     github: null,
     stack: ["Next", "Redux", "TypeScript", "Tailwindcss"],
     totalImages: 5,
