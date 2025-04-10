@@ -1,17 +1,25 @@
-import ImagesPreview from '@/components/ProjectDetails/ImagesPreview';
-import StackPreview from '@/components/ProjectDetails/StackPreview';
-import GoBack from '@/components/shared/GoBack';
-import { MyProjectsData } from '@/data/myProjects';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FaEye } from 'react-icons/fa';
-import { IoLockClosedSharp } from 'react-icons/io5';
+import ImagesPreview from "@/components/ProjectDetails/ImagesPreview";
+import StackPreview from "@/components/ProjectDetails/StackPreview";
+import GoBack from "@/components/shared/GoBack";
+import { MyProjectsData } from "@/data/myProjects";
+import Image from "next/image";
+import Link from "next/link";
+import { FaEye } from "react-icons/fa";
+import { IoLockClosedSharp } from "react-icons/io5";
 
-function ProjectDetails({ params }: { params: { id: string } }) {
+export const revalidate = 36000;
+
+export async function generateStaticParams() {
+  return MyProjectsData.map((project) => ({
+    id: String(project.id),
+  }));
+}
+
+async function ProjectDetails({ params }: { params: { id: string } }) {
   const { id } = params;
 
   const targetProject = MyProjectsData.find(
-    (item) => item.title.trim().replace(/ /g, '-') == id
+    (item) => item.title.trim().replace(/ /g, "-") == id
   );
   return (
     <div className=" flex flex-col gap-2">
